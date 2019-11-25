@@ -1,0 +1,26 @@
+<html>
+  <head>
+
+  </head>
+
+  <body>
+    <h2>New game</h2>
+    <ul class="list-inline">
+      <% @grid.each do |letter| %>
+      <li>
+        <%= letter %>
+      </li>
+      <% end %>
+    </ul>
+
+    <p>What is the longest word you know using these, and only these letters?</p>
+    <form action="/score" method="post">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <%= hidden_field_tag :grid, @grid %>
+      <div class="form-group">
+        <input type="text" name="word" class="form-control">
+      </div>
+        <input type="submit" class="btn btn-primary">
+    </form>
+  </body>
+</html>

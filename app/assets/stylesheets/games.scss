@@ -1,0 +1,17 @@
+.list-inline {
+  list-style: none;
+  padding: 0;
+}
+
+.list-inline li {
+  display: inline-block;
+  margin: 2px;
+  font-size: 20px;
+  background-color: blue;
+  width: 30px;
+  height: 30px;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid rgb(240, 240, 240);
+}
